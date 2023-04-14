@@ -1,0 +1,14 @@
+header {
+    text-align: center;
+    background-color: lightblue;
+    font-size: 22px;
+}
+
+header > div {
+    text-align: right;
+}
+
+h2,
+form {
+    text-align: right;
+}
