@@ -10,7 +10,7 @@ N/A
 
 ## Usage
 
-To use the website, click on the Start Quiz button and that will start your Timer and the multiple choice quiz. For correct answers the timer will continue its countdown at a normal pace, but for incorrect answers you will get a 10 second timer deduction. When all the questions are answered, the time left will be your score and you can save your initials for your score which is stored in localStorage.
+To use the website, click on the Start Quiz button and that will start your Timer and the multiple choice quiz. For correct answers the timer will continue its countdown at a normal pace, but for incorrect answers you will get a 10 second timer deduction. When all the questions are answered, the time left will be your score and you can save your initials for your score which is stored in localStorage. Go to Inspect and then go to Application in the c
 
 ## Credits
 

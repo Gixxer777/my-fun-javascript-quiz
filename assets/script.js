@@ -5,7 +5,7 @@ var timer = document.getElementById("timerEl");
 var timerCount = 60;
 var score;
 var endQuiz = document.getElementById("endQuiz");
-//var scoreForm = document.querySelector("#score");
+var scoreForm = document.querySelector("#score");
 var questions = [
   {
     question: "What is not a Javascript data type?",
@@ -60,7 +60,7 @@ function generateQuestion() {
   // append that question element into our quiz area (appendChild)
    quizArea.appendChild(divEl);
   // generateAnswerChoices
-  divEl.setAttribute("style", "text-align: center; font-size: 24px")
+  divEl.setAttribute("style", "text-align: center; font-size: 22px")
  generateAnswerChoices();
 }
 
@@ -78,7 +78,8 @@ function generateAnswerChoices() {
  }
   // append that question element into our quiz area (appendChild)
   quizArea.appendChild(btnEl);
-  btnEl.setAttribute("style", "align-items: center; font-size: 16px; margin: 120px")
+  btnEl.setAttribute("style", "margin:120px")
+  
   }
 }
 
@@ -145,16 +146,14 @@ function saveScore(event) {
 
 function getScore() {
   // get high score out of localstorage
-  var score = JSON.parse(localStorage.getItem("score"))
+  var score = JSON.parse(localStorage.getItem("score")) || []
   for (var i = 0; i < score.length;  i++) {
     console.log(score[i])
     var scoreEL = document.createElement("p");
-    scoreEL.textContent = score[i].initials;
-    endQuiz.appendChild(scoreEL);
-
+    scoreEL.textContent = score[i].initials + " " + score[i].score
+ endQuiz.appendChild(scoreEL)
 }
 }
 getScore ();
 startBtn.addEventListener("click", startQuiz);
-
 scoreForm.addEventListener("submit", saveScore);
